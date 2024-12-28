@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Project - Idea Collab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-green-500 p-6 sticky top-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold text-black">Idea Collab</div>
+            <div class="relative">
+                <input type="text" placeholder="Search Here" class="rounded-full py-2 px-4" style="width: 30rem;">
+                <button class="absolute right-0 top-0 mt-2 mr-4">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <nav class="space-x-4 text-black flex items-center">
+                <div class="relative">
+                    <i class="fas fa-bell text-xl cursor-pointer"></i>
+                    <!-- Notification Badge -->
+                    <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-2 py-1"></span>
+                </div>
+                <a href="#" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Explore Projects</a>
+                <a href="#" class="hover:underline">My Projects</a>
+                <a href="#" class="hover:underline">Logout</a>  
+    
+                <!-- Profile Picture as a Link -->
+                <a href="/profile-page" class="relative">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-full w-10 h-10 object-cover border-2 border-white cursor-pointer">
+                </a>
+    
+                
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Main Content -->
+    <main class="py-8">
+        <div class="container mx-auto">
+            <!-- Add New Project Form -->
+            <div class="bg-white border rounded-lg shadow-md p-6 mb-8">
+                <h1 class="text-4xl font-bold mb-6">Add New Project</h1>
+                
+                <form action="#" method="POST">
+                    <!-- Project Title -->
+                    <div class="mb-4">
+                        <label for="project-title" class="block text-xl font-semibold mb-2">Project Title</label>
+                        <input type="text" id="project-title" name="title" class="w-full p-4 border rounded-lg" placeholder="Enter project title" required>
+                    </div>
+
+                    <!-- Short Description -->
+                    <div class="mb-4">
+                        <label for="short-description" class="block text-xl font-semibold mb-2">Short Description</label>
+                        <textarea id="short-description" name="short-description" class="w-full p-4 border rounded-lg" rows="2" placeholder="Enter a short description of the project" required></textarea>
+                    </div>
+
+                    <!-- Project Description -->
+                    <div class="mb-4">
+                        <label for="project-description" class="block text-xl font-semibold mb-2">Project Description</label>
+                        <textarea id="project-description" name="description" class="w-full p-4 border rounded-lg" rows="4" placeholder="Enter project description" required></textarea>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="mb-4">
+                        <label for="key-features" class="block text-xl font-semibold mb-2">Key Features</label>
+                        <textarea id="key-features" name="features" class="w-full p-4 border rounded-lg" rows="4" placeholder="Enter key features of the project" required></textarea>
+                    </div>
+
+                    <!-- Required Skills -->
+                    <div class="mb-4">
+                        <label for="skills" class="block text-xl font-semibold mb-2">Required Skills</label>
+                        <input type="text" id="skills" name="skills" class="w-full p-4 border rounded-lg" placeholder="Enter required skills (comma separated)" required>
+                    </div>
+                    
+                    <!-- GitHub Repository Link -->
+                    <div class="mb-4">
+                        <label for="github-repository" class="block text-xl font-semibold mb-2">GitHub Repository Link</label>
+                        <input type="url" id="github-repository" name="github-repository" class="w-full p-4 border rounded-lg" placeholder="Enter GitHub repository URL" required>
+                    </div>
+
+                    <!-- Jira Link -->
+                    <div class="mb-4">
+                        <label for="jira-link" class="block text-xl font-semibold mb-2">Jira Link</label>
+                        <input type="url" id="jira-link" name="jira-link" class="w-full p-4 border rounded-lg" placeholder="Enter Jira URL" required>
+                    </div>
+                    <!-- Tags -->
+                    <div class="mb-4">
+                        <label for="tags" class="block text-xl font-semibold mb-2">Tags</label>
+                        <input type="text" id="tags" name="tags" class="w-full p-4 border rounded-lg" placeholder="Enter tags (comma separated)" required>
+                    </div>
+
+                    <!-- Participants -->
+                    <div class="mb-4">
+                        <label for="participants" class="block text-xl font-semibold mb-2">Participants</label>
+                        <input type="number" id="participants" name="participants" class="w-full p-4 border rounded-lg" placeholder="Enter number of participants" required>
+                    </div>
+
+                    <!-- Vacancies -->
+                    <div class="mb-4">
+                        <label for="vacancies" class="block text-xl font-semibold mb-2">Vacancies</label>
+                        <input type="number" id="vacancies" name="vacancies" class="w-full p-4 border rounded-lg" placeholder="Enter number of vacancies" required>
+                    </div>
+
+                    <!-- Project Deadline -->
+                    <div class="mb-4">
+                        <label for="deadline" class="block text-xl font-semibold mb-2">Deadline</label>
+                        <input type="date" id="deadline" name="deadline" class="w-full p-4 border rounded-lg" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="mt-6">
+                        <button type="submit" class="bg-blue-500 text-white py-2 px-6 rounded-full">Create Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-500 text-center py-4 mt-8">
+        <p class="text-white">&copy; 2024 Idea Collab. All rights reserved.</p>
+    </footer>
+</body>
+</html>
