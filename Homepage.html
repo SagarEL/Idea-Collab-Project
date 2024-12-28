@@ -1,0 +1,150 @@
+<html>
+<head>
+    <title>Idea Collab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white">
+    <header class="bg-green-500 p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold text-black">Idea Collab</div>
+            <div class="relative">
+                <input type="text" placeholder="Search Here" class="rounded-full py-2 px-4" style="width: 30rem;">
+                <button class="absolute right-0 top-0 mt-2 mr-4">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <nav class="space-x-4 text-black flex items-center">
+                <!-- Notification Icon -->
+                <div class="relative">
+                    <i class="fas fa-bell text-xl cursor-pointer"></i>
+                    <!-- Notification Badge -->
+                    <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-2 py-1">  </span>
+                </div>
+                <a href="#" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Explore Projects</a>
+                <a href="#" class="hover:underline">My Projects</a>
+                <a href="#" class="hover:underline">Login/Sign up</a>
+    
+                
+            </nav>
+        </div>
+    </header>
+    
+    <main class="bg-green-500 text-center py-16">
+        <h1 class="text-4xl font-bold text-white">Connect. Collaborate. Create.</h1>
+        <p class="text-white mt-4">Bring your ideas to life by collaborating with enthusiasts across various domains.</p>
+        <button class="mt-8 bg-white text-green-500 font-bold py-2 px-6 rounded-full">Start a new project</button>
+    </main>
+    <section class="bg-white py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-8">Projects that Match Your Skills</h2>
+            <div class="relative">
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-green-500 text-white px-4 py-2 rounded-full z-10" onclick="scrollLeft()">&lt;</button>
+                <div id="projectContainer" class="flex space-x-4 overflow-x-auto scrollbar-hide px-4">
+                    <!-- Project Cards -->
+                    <div class="bg-white border rounded-lg p-4 shadow-md min-w-[250px]">
+                        <h3 class="font-bold">Project Name 1</h3>
+                        <p>Project Title 1</p>
+                        <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 shadow-md min-w-[250px]">
+                        <h3 class="font-bold">Project Name 2</h3>
+                        <p>Project Title 2</p>
+                        <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 shadow-md min-w-[250px]">
+                        <h3 class="font-bold">Project Name 3</h3>
+                        <p>Project Title 3</p>
+                        <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 shadow-md min-w-[250px]">
+                        <h3 class="font-bold">Project Name 4</h3>
+                        <p>Project Title 4</p>
+                        <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 shadow-md min-w-[250px]">
+                        <h3 class="font-bold">Project Name 5</h3>
+                        <p>Project Title 5</p>
+                        <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 shadow-md min-w-[250px]">
+                        <h3 class="font-bold">Project Name 6</h3>
+                        <p>Project Title 6</p>
+                        <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 shadow-md min-w-[250px]">
+                        <h3 class="font-bold">Project Name 7</h3>
+                        <p>Project Title 7</p>
+                        <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                    </div>
+                </div>
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-green-500 text-white px-4 py-2 rounded-full z-10" onclick="scrollRight()">&gt;</button>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-8">Trending Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Project Cards Row 1 -->
+                <div class="bg-white border rounded-lg p-4 shadow-md">
+                    <h3 class="font-bold">Trending Project 1</h3>
+                    <p>Description 1</p>
+                    <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                </div>
+                <div class="bg-white border rounded-lg p-4 shadow-md">
+                    <h3 class="font-bold">Trending Project 2</h3>
+                    <p>Description 2</p>
+                    <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                </div>
+                <div class="bg-white border rounded-lg p-4 shadow-md">
+                    <h3 class="font-bold">Trending Project 3</h3>
+                    <p>Description 3</p>
+                    <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                </div>
+                <div class="bg-white border rounded-lg p-4 shadow-md">
+                    <h3 class="font-bold">Trending Project 4</h3>
+                    <p>Description 4</p>
+                    <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                </div>
+                <!-- Project Cards Row 2 -->
+                <div class="bg-white border rounded-lg p-4 shadow-md">
+                    <h3 class="font-bold">Trending Project 5</h3>
+                    <p>Description 5</p>
+                    <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                </div>
+                <div class="bg-white border rounded-lg p-4 shadow-md">
+                    <h3 class="font-bold">Trending Project 6</h3>
+                    <p>Description 6</p>
+                    <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                </div>
+                <div class="bg-white border rounded-lg p-4 shadow-md">
+                    <h3 class="font-bold">Trending Project 7</h3>
+                    <p>Description 7</p>
+                    <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                </div>
+                <div class="bg-white border rounded-lg p-4 shadow-md">
+                    <h3 class="font-bold">Trending Project 8</h3>
+                    <p>Description 8</p>
+                    <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded-full">Join Project</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-green-500 text-center py-4">
+        <p class="text-white">&copy; 2024 Idea Collab. All rights reserved.</p>
+    </footer>
+    <script>
+        function scrollLeft() {
+            const container = document.getElementById('projectContainer');
+            container.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+    
+        function scrollRight() {
+            const container = document.getElementById('projectContainer');
+            container.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+    </script>
+    
