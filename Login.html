@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .container input {
+            width: 97%;
+            padding: 7px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00c853;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #00b248;
+        }
+
+        .container .signup {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .container .signup a {
+            color: #0000ff;
+            text-decoration: none;
+        }
+
+        .container .signup a:hover {
+            text-decoration: underline;
+        }
+
+        .corner-decor {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            background-color: #00c853;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+        }
+
+        .corner-decor.bottom-right {
+            top: auto;
+            left: auto;
+            bottom: 0;
+            right: 0;
+            clip-path: polygon(100% 100%, 0 100%, 100% 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="corner-decor"></div>
+    <div class="corner-decor bottom-right"></div>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="#" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Your Password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <div class="signup">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
+</body>
+</html>
