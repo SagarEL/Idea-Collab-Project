@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Idea Collab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-green-500 p-6 sticky top-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold text-black">Idea Collab</div>
+            <div class="relative">
+                <input type="text" placeholder="Search Here" class="rounded-full py-2 px-4" style="width: 30rem;">
+                <button class="absolute right-0 top-0 mt-2 mr-4">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <nav class="space-x-4 text-black flex items-center">
+                <div class="relative">
+                    <i class="fas fa-bell text-xl cursor-pointer"></i>
+                    <!-- Notification Badge -->
+                    <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-2 py-1"></span>
+                </div>
+                <a href="#" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Explore Projects</a>
+                <a href="#" class="hover:underline">My Projects</a>
+                <a href="#" class="hover:underline">Logout</a>  
+    
+                <!-- Profile Picture as a Link -->
+                <a href="/profile-page" class="relative">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-full w-10 h-10 object-cover border-2 border-white cursor-pointer">
+                </a>
+    
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-8">
+        <div class="container mx-auto">
+            <!-- Project Overview -->
+<div class="bg-white border rounded-lg shadow-md p-6 mb-8">
+    <div class="flex items-center justify-between">
+        <!-- Project Title and Icons -->
+        <div class="flex items-center">
+            <!-- Project Title -->
+            <h1 class="text-4xl font-bold mr-4">Project Title 1</h1>
+
+            <!-- GitHub Link Icon -->
+            <a href="https://github.com/your-repository-link" target="_blank" class="text-gray-800 hover:text-green-500">
+                <i class="fab fa-github text-2xl"> </i>
+            </a>
+
+            <!-- Jira Link Icon -->
+            <a href="https://jira.your-domain.com/browse/your-project-id" target="_blank" class="text-gray-800 hover:text-blue-500 ml-4">
+                <i class="fab fa-jira text-2xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Project Description -->
+    <p class="text-gray-700 mt-4">
+        A detailed overview of Project Title 1. This section explains the purpose, goals, and scope of the project. It also highlights the technologies being used, challenges being addressed, and the overall vision.
+    </p>
+    
+    <div class="mt-6">
+        <p class="text-sm text-gray-500">
+            Participants: <span class="font-semibold">25 Users</span> | Vacancies: <span class="font-semibold">5 Spots</span>
+        </p>
+        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+            <div class="bg-green-500 h-2 rounded-full" style="width: 60%;"></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-1">Progress: 60%</p>
+    </div>
+
+    <div class="mt-6">
+        <button class="bg-blue-500 text-white py-2 px-6 rounded-full">Request to Join</button>
+    </div>
+</div>
+
+
+            <!-- Key Features Section -->
+            <section class="bg-white border rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-4">Key Features</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Collaborative platform to build ideas into reality.</li>
+                    <li>Focus on sustainable and innovative solutions.</li>
+                    <li>Integration with modern technologies like AI and blockchain.</li>
+                    <li>Real-time updates and progress tracking for all team members.</li>
+                </ul>
+            </section>
+
+            <!-- Tags and Skills Section -->
+            <section class="bg-white border rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-4">Tags and Skills</h2>
+                <div class="space-y-4">
+                    <!-- Tags -->
+                    <div>
+                        <h3 class="text-xl font-semibold">Tags:</h3>
+                        <ul class="flex space-x-4 mt-2">
+                            <li class="bg-green-200 text-green-800 py-1 px-4 rounded-full text-sm">AI</li>
+                            <li class="bg-green-200 text-green-800 py-1 px-4 rounded-full text-sm">Blockchain</li>
+                            <li class="bg-green-200 text-green-800 py-1 px-4 rounded-full text-sm">Sustainability</li>
+                            <li class="bg-green-200 text-green-800 py-1 px-4 rounded-full text-sm">Innovation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skills -->
+                    <div>
+                        <h3 class="text-xl font-semibold">Required Skills:</h3>
+                        <ul class="flex space-x-4 mt-2">
+                            <li class="bg-blue-200 text-blue-800 py-1 px-4 rounded-full text-sm">Python</li>
+                            <li class="bg-blue-200 text-blue-800 py-1 px-4 rounded-full text-sm">Blockchain Development</li>
+                            <li class="bg-blue-200 text-blue-800 py-1 px-4 rounded-full text-sm">Machine Learning</li>
+                            <li class="bg-blue-200 text-blue-800 py-1 px-4 rounded-full text-sm">UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Participants Section -->
+            <section class="bg-white border rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-4">Participants</h2>
+                <div class="space-y-4">
+                    <!-- Participant 1 -->
+                    <div class="flex items-center bg-gray-50 p-4 rounded-lg shadow">
+                        <img src="https://via.placeholder.com/50" alt="Profile" class="rounded-full w-12 h-12">
+                        <div class="ml-4">
+                            <p class="text-lg font-semibold">John Doe</p>
+                            <p class="text-sm text-gray-500">Role: Developer</p>
+                        </div>
+                    </div>
+
+                    <!-- Participant 2 -->
+                    <div class="flex items-center bg-gray-50 p-4 rounded-lg shadow">
+                        <img src="https://via.placeholder.com/50" alt="Profile" class="rounded-full w-12 h-12">
+                        <div class="ml-4">
+                            <p class="text-lg font-semibold">Jane Smith</p>
+                            <p class="text-sm text-gray-500">Role: Designer</p>
+                        </div>
+                    </div>
+
+                    <!-- Participant 3 -->
+                    <div class="flex items-center bg-gray-50 p-4 rounded-lg shadow">
+                        <img src="https://via.placeholder.com/50" alt="Profile" class="rounded-full w-12 h-12">
+                        <div class="ml-4">
+                            <p class="text-lg font-semibold">Alice Johnson</p>
+                            <p class="text-sm text-gray-500">Role: Project Manager</p>
+                        </div>
+                    </div>
+
+                    <!-- Add more participants dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-500 text-center py-4 mt-8">
+        <p class="text-white">&copy; 2024 Idea Collab. All rights reserved.</p>
+    </footer>
+</body>
+</html>
