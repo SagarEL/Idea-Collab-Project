@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Idea Collab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-green-500 p-6 sticky top-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold text-black">Idea Collab</div>
+            <div class="relative">
+                <input type="text" placeholder="Search Here" class="rounded-full py-2 px-4" style="width: 30rem;">
+                <button class="absolute right-0 top-0 mt-2 mr-4">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <nav class="space-x-4 text-black flex items-center">
+                <!-- Notification Icon -->
+                <div class="relative">
+                    <i class="fas fa-bell text-xl cursor-pointer"></i>
+                    <!-- Notification Badge -->
+                    <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-2 py-1"></span>
+                </div>
+                <a href="#" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Explore Projects</a>
+                <a href="#" class="hover:underline">My Projects</a>
+                <a href="#" class="hover:underline">Logout</a>
+                <!-- Profile Picture as a Link -->
+                <a href="/profile-page" class="relative">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-full w-10 h-10 object-cover border-2 border-white cursor-pointer">
+                </a>
+    
+                
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Main Content -->
+    <main class="py-8">
+        <div class="container mx-auto">
+            <!-- Profile Section -->
+            <div class="bg-white border rounded-lg shadow-md p-6 mb-8">
+                <h1 class="text-4xl font-bold mb-6">Profile</h1>
+
+                <!-- Profile Image -->
+                <div class="flex items-center mb-6">
+                    <img src="https://via.placeholder.com/150" alt="Profile Image" id="profile-image" class="w-32 h-32 rounded-full border-2 border-gray-300 mr-6">
+                    <div>
+                        <input type="file" id="image-upload" class="hidden" accept="image/*" onchange="previewImage(event)">
+                        <label for="image-upload" class="bg-blue-500 text-white py-2 px-6 rounded-full cursor-pointer">Change Image</label>
+                    </div>
+                </div>
+
+                <!-- Profile Info -->
+                <div class="mb-6">
+                    <p class="text-xl font-semibold">Name:</p>
+                    <p class="text-lg text-gray-700" id="user-name">John Doe</p>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-xl font-semibold">Email:</p>
+                    <p class="text-lg text-gray-700" id="user-email">john.doe@example.com</p>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-xl font-semibold">Bio:</p>
+                    <p class="text-lg text-gray-700" id="user-bio">A passionate developer focused on building innovative and sustainable solutions for the future.</p>
+                </div>
+
+                <!-- Additional Fields -->
+                <div class="mb-6">
+                    <p class="text-xl font-semibold">Skills:</p>
+                    <p class="text-lg text-gray-700" id="user-skills">JavaScript, Python, React, Node.js, Web Development</p>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-xl font-semibold">Location:</p>
+                    <p class="text-lg text-gray-700" id="user-location">New York, USA</p>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-xl font-semibold">Interests:</p>
+                    <p class="text-lg text-gray-700" id="user-interests">Traveling, Reading, Hiking, Coding, Photography</p>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-xl font-semibold">Social Media:</p>
+                    <p class="text-lg text-gray-700">
+                        <a href="https://linkedin.com" target="_blank" class="text-blue-500 hover:underline">LinkedIn</a> | 
+                        <a href="https://github.com" target="_blank" class="text-gray-700 hover:underline">GitHub</a> | 
+                        <a href="https://twitter.com" target="_blank" class="text-blue-400 hover:underline">Twitter</a>
+                    </p>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-xl font-semibold">Portfolio/Website:</p>
+                    <p class="text-lg text-gray-700" id="user-website">
+                        <a href="https://www.johndoe.com" target="_blank" class="text-blue-500 hover:underline">www.johndoe.com</a>
+                    </p>
+                </div>
+
+                <!-- Edit Profile Button -->
+                <div class="mt-6">
+                    <button class="bg-yellow-500 text-white py-2 px-6 rounded-full">Edit Profile</button>
+                </div>
+            </div>
+
+            <!-- Edit Profile Form (Hidden by default) -->
+            <div id="edit-profile" class="bg-white border rounded-lg shadow-md p-6 mb-8 hidden">
+                <h2 class="text-3xl font-bold mb-6">Edit Profile</h2>
+
+                <!-- Edit Profile Image -->
+                <div class="flex items-center mb-6">
+                    <img src="https://via.placeholder.com/150" alt="Profile Image" id="edit-profile-image" class="w-32 h-32 rounded-full border-2 border-gray-300 mr-6">
+                    <div>
+                        <input type="file" id="edit-image-upload" class="hidden" accept="image/*" onchange="previewEditImage(event)">
+                        <label for="edit-image-upload" class="bg-blue-500 text-white py-2 px-6 rounded-full cursor-pointer">Change Image</label>
+                    </div>
+                </div>
+
+                <!-- Name -->
+                <div class="mb-4">
+                    <label for="edit-name" class="text-xl font-semibold">Name:</label>
+                    <input type="text" id="edit-name" class="w-full p-4 border rounded-lg" value="John Doe" required>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-4">
+                    <label for="edit-email" class="text-xl font-semibold">Email:</label>
+                    <input type="email" id="edit-email" class="w-full p-4 border rounded-lg" value="john.doe@example.com" required>
+                </div>
+
+                <!-- Bio -->
+                <div class="mb-4">
+                    <label for="edit-bio" class="text-xl font-semibold">Bio:</label>
+                    <textarea id="edit-bio" class="w-full p-4 border rounded-lg" rows="4" required>A passionate developer focused on building innovative and sustainable solutions for the future.</textarea>
+                </div>
+
+                <!-- Skills -->
+                <div class="mb-4">
+                    <label for="edit-skills" class="text-xl font-semibold">Skills:</label>
+                    <input type="text" id="edit-skills" class="w-full p-4 border rounded-lg" value="JavaScript, Python, React, Node.js, Web Development" required>
+                </div>
+
+                <!-- Location -->
+                <div class="mb-4">
+                    <label for="edit-location" class="text-xl font-semibold">Location:</label>
+                    <input type="text" id="edit-location" class="w-full p-4 border rounded-lg" value="New York, USA" required>
+                </div>
+
+                <!-- Interests -->
+                <div class="mb-4">
+                    <label for="edit-interests" class="text-xl font-semibold">Interests:</label>
+                    <input type="text" id="edit-interests" class="w-full p-4 border rounded-lg" value="Traveling, Reading, Hiking, Coding, Photography" required>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="mb-4">
+                    <label for="edit-social" class="text-xl font-semibold">Social Media:</label>
+                    <input type="text" id="edit-social" class="w-full p-4 border rounded-lg" value="LinkedIn, GitHub, Twitter" required>
+                </div>
+
+                <!-- Portfolio Link -->
+                <div class="mb-4">
+                    <label for="edit-website" class="text-xl font-semibold">Portfolio/Website:</label>
+                    <input type="url" id="edit-website" class="w-full p-4 border rounded-lg" value="https://www.johndoe.com" required>
+                </div>
+
+                <!-- Save Changes -->
+                <div class="mt-6">
+                    <button class="bg-green-500 text-white py-2 px-6 rounded-full" onclick="saveProfile()">Save Changes</button>
+                    <button class="bg-red-500 text-white py-2 px-6 rounded-full ml-4" onclick="cancelEdit()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-500 text-center py-4 mt-8">
+        <p class="text-white">&copy; 2024 Idea Collab. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Preview Profile Image
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                const output = document.getElementById('profile-image');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        // Preview Edit Profile Image
+        function previewEditImage(event) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                const output = document.getElementById('edit-profile-image');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        // Edit Profile Toggle
+        function editProfile() {
+            document.getElementById('edit-profile').classList.remove('hidden');
+            document.getElementById('edit-profile').classList.add('block');
+        }
+
+        // Cancel Editing
+        function cancelEdit() {
+            document.getElementById('edit-profile').classList.remove('block');
+            document.getElementById('edit-profile').classList.add('hidden');
+        }
+
+        // Save Profile Changes (you would need to add functionality here)
+        function saveProfile() {
+            const name = document.getElementById('edit-name').value;
+            const email = document.getElementById('edit-email').value;
+            const bio = document.getElementById('edit-bio').value;
+            const skills = document.getElementById('edit-skills').value;
+            const location = document.getElementById('edit-location').value;
+            const interests = document.getElementById('edit-interests').value;
+            const website = document.getElementById('edit-website').value;
+
+            // Update profile display
+            document.getElementById('user-name').textContent = name;
+            document.getElementById('user-email').textContent = email;
+            document.getElementById('user-bio').textContent = bio;
+            document.getElementById('user-skills').textContent = skills;
+            document.getElementById('user-location').textContent = location;
+            document.getElementById('user-interests').textContent = interests;
+            document.getElementById('user-website').textContent = website;
+
+            cancelEdit(); // Hide the edit profile section after saving changes
+        }
+
+        // Initial Edit Profile Button click event
+        document.querySelector('.bg-yellow-500').addEventListener('click', editProfile);
+    </script>
+</body>
+</html>
