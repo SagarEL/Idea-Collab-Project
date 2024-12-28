@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Idea Collab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-green-500 p-6 sticky top-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold text-black">Idea Collab</div>
+            <div class="relative">
+                <input type="text" placeholder="Search Here" class="rounded-full py-2 px-4" style="width: 30rem;">
+                <button class="absolute right-0 top-0 mt-2 mr-4">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <nav class="space-x-4 text-black flex items-center">
+                <!-- Notification Icon with Badge -->
+                <div class="relative">
+                    <i class="fas fa-bell text-xl cursor-pointer"></i>
+                    <!-- Notification Badge with a number -->
+                    <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-2 py-1"></span>
+                </div>
+                <a href="#" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Explore Projects</a>
+                <a href="#" class="hover:underline">My Projects</a>
+                <a href="#" class="hover:underline">Logout</a>
+                <!-- Profile Picture as a Link -->
+                <a href="/profile-page" class="relative">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-full w-10 h-10 object-cover border-2 border-white cursor-pointer">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-8">
+        <div class="container mx-auto">
+            <!-- Project Details Section -->
+            <div class="bg-white border rounded-lg shadow-md p-6 mb-6">
+                <h1 class="text-3xl font-bold">Project Title 1</h1>
+                <p class="text-gray-700 mt-2">
+                    A detailed description of Project Title 1. This section elaborates on the goals, features, and objectives of the project.
+                </p>
+                <div class="mt-4">
+                    <p class="text-sm text-gray-500">
+                        Participants: <span class="font-semibold">25 Users</span> | Vacancies: <span class="font-semibold">5 Spots</span>
+                    </p>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 60%;"></div>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-1">Progress: 60%</p>
+                </div>
+            </div>
+
+            <!-- Pending Requests Section -->
+            <div class="bg-white border rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4">Pending Requests</h2>
+                <div class="space-y-4">
+                    <!-- Request 1 -->
+                    <div class="flex justify-between items-center bg-gray-50 p-4 rounded-lg shadow hover:bg-gray-100 transition-all">
+                        <div>
+                            <p class="text-lg font-semibold">John Doe</p>
+                            <p class="text-sm text-gray-500">"I would love to join this project and contribute my skills."</p>
+                        </div>
+                        <div class="space-x-4">
+                            <button class="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 transition-all approve-btn">
+                                Approve
+                            </button>
+                            <button class="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition-all reject-btn">
+                                Reject
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Request 2 -->
+                    <div class="flex justify-between items-center bg-gray-50 p-4 rounded-lg shadow hover:bg-gray-100 transition-all">
+                        <div>
+                            <p class="text-lg font-semibold">Jane Smith</p>
+                            <p class="text-sm text-gray-500">"I have experience in similar projects and would like to help."</p>
+                        </div>
+                        <div class="space-x-4">
+                            <button class="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 transition-all approve-btn">
+                                Approve
+                            </button>
+                            <button class="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition-all reject-btn">
+                                Reject
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- More Requests -->
+                    <!-- Add additional request cards dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-500 text-center py-4 mt-8">
+        <p class="text-white">&copy; 2024 Idea Collab. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle approve and reject buttons
+        document.querySelectorAll('.approve-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Request Approved!');
+                btn.closest('.flex').remove(); // Remove request from the list
+            });
+        });
+
+        document.querySelectorAll('.reject-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Request Rejected!');
+                btn.closest('.flex').remove(); // Remove request from the list
+            });
+        });
+    </script>
+</body>
+</html>
