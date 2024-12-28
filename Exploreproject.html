@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List - Idea Collab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-green-500 p-6 sticky top-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl font-bold text-black">Idea Collab</div>
+            <div class="relative">
+                <input type="text" placeholder="Search Here" class="rounded-full py-2 px-4" style="width: 30rem;">
+                <button class="absolute right-0 top-0 mt-2 mr-4">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <nav class="space-x-4 text-black flex items-center">
+                <div class="relative">
+                    <i class="fas fa-bell text-xl cursor-pointer"></i>
+                    <!-- Notification Badge -->
+                    <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-2 py-1"></span>
+                </div>
+                <a href="#" class="hover:underline">Home</a>
+                <a href="#" class="hover:underline">Explore Projects</a>
+                <a href="#" class="hover:underline">My Projects</a>
+                <a href="#" class="hover:underline">Logout</a>  
+    
+                <!-- Profile Picture as a Link -->
+                <a href="/profile-page" class="relative">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-full w-10 h-10 object-cover border-2 border-white cursor-pointer">
+                </a>
+    
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-8">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold text-center mb-8">Explore Projects</h1>
+            <div class="space-y-6">
+                <!-- Project Card -->
+                <div class="bg-white border rounded-lg shadow-md p-6 flex flex-col sm:flex-row justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-xl">Project Title 1</h3>
+                        <p class="text-gray-700 mt-2">A short description of Project Title 1. It provides a brief overview of the project to engage users.</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Participants: <span class="font-semibold">25 Users</span> | Vacancies: <span class="font-semibold">5 Spots</span>
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 60%;"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Progress: 60%</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 flex space-x-4">
+                        <button class="bg-green-500 text-white py-2 px-4 rounded-full">Request Team</button>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Read More</button>
+                    </div>
+                </div>
+                
+
+                <!-- Repeat for other projects -->
+                <div class="bg-white border rounded-lg shadow-md p-6 flex flex-col sm:flex-row justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-xl">Project Title 2</h3>
+                        <p class="text-gray-700 mt-2">A short description of Project Title 2. Learn more about its exciting features and goals.</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Participants: <span class="font-semibold">40 Users</span> | Vacancies: <span class="font-semibold">2 Spots</span>
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 80%;"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Progress: 80%</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 flex space-x-4">
+                        <button class="bg-green-500 text-white py-2 px-4 rounded-full">Request Team</button>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Read More</button>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-lg shadow-md p-6 flex flex-col sm:flex-row justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-xl">Project Title 3</h3>
+                        <p class="text-gray-700 mt-2">A short description of Project Title 3. Join the team and contribute to something meaningful.</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Participants: <span class="font-semibold">15 Users</span> | Vacancies: <span class="font-semibold">10 Spots</span>
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 45%;"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Progress: 45%</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 flex space-x-4">
+                        <button class="bg-green-500 text-white py-2 px-4 rounded-full">Request Team</button>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Read More</button>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-lg shadow-md p-6 flex flex-col sm:flex-row justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-xl">Project Title 4</h3>
+                        <p class="text-gray-700 mt-2">A short description of Project Title 4. It provides a brief overview of the project to engage users.</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Participants: <span class="font-semibold">40 Users</span> | Vacancies: <span class="font-semibold">5 Spots</span>
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 60%;"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Progress: 70%</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 flex space-x-4">
+                        <button class="bg-green-500 text-white py-2 px-4 rounded-full">Request Team</button>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Read More</button>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-lg shadow-md p-6 flex flex-col sm:flex-row justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-xl">Project Title 5</h3>
+                        <p class="text-gray-700 mt-2">A short description of Project Title 5. It provides a brief overview of the project to engage users.</p>
+                        <p class="text-sm text-gray-500 mt-2">
+                            Participants: <span class="font-semibold">15 Users</span> | Vacancies: <span class="font-semibold">5 Spots</span>
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 60%;"></div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Progress: 65%</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 flex space-x-4">
+                        <button class="bg-green-500 text-white py-2 px-4 rounded-full">Request Team</button>
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded-full">Read More</button>
+                    </div>
+                </div>
+                
+                <!-- Add more projects here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-500 text-center py-4 mt-8">
+        <p class="text-white">&copy; 2024 Idea Collab. All rights reserved.</p>
+    </footer>
+</body>
+</html>
